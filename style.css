@@ -6,12 +6,12 @@
 @font-face {
     font-family: "Acronym-Regular";
     src: url(./fonts/Acronym-Regular.woff2);
-    font-weight: 300;
+    font-weight: 500;
 }
 @font-face {
     font-family: "Acronym-Bold";
     src: url(./fonts/Acronym-Bold.woff2);
-    font-weight: 300;
+    font-weight: 700;
 }
 
 :root {
@@ -267,9 +267,70 @@ body {
     font-family: "Acronym-Bold";
 }
 
+.country {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: var(--padding);
+}
+
+.country__button {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 10px;
+}
+
+.country__wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.country__img {
+    width: 45%;
+}
+
+.country__main-description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.country__desc-wrapper {
+    display: flex;
+    gap: 80px;
+}
+
+.country__neighbor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.country__name {
+    font-size: 20px;
+    font-family: "Acronym-Bold";
+}
+.country__description {
+    padding: 5px 0px;
+    font-size: 14px;
+    color: rgb(195, 194, 194);
+}
+
 @media (max-width: 1024px) {
     .flags__item {
         flex: 0 0 40%;
+    }
+
+    .country__wrapper {
+        flex-direction: column;
+    }
+
+    .country__img {
+        
+        min-width: 500px;
     }
 }
 
@@ -310,6 +371,27 @@ body {
     .flags {
         padding: 20px 0;
     }
+
+    .country__desc-wrapper {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .country__neighbor-list {
+        width: 400px;
+    }
+
+    .country__neighbor-item {
+        flex-basis: 40%;
+        
+    }
+
+    .country__img {
+        width: 100%;
+        max-width: 500px;
+        min-width: 10px;
+    }
+
 
 
 }
