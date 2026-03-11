@@ -374,7 +374,7 @@ body {
 
     .country__desc-wrapper {
         flex-direction: column;
-        gap: 0px;
+        gap: 30px;
     }
 
     .country__neighbor-list {
