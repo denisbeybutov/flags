@@ -160,9 +160,10 @@ body {
 
 .search__filter {
     position: relative;
-    width: 340px;
+    width: 450px;
     display: flex;
     gap: 20px;
+    height: 46px;
 }
 
 .search__button {
@@ -185,7 +186,12 @@ body {
     color:var(--color-switcher-hover);
 }
 
-
+.search__search-button {
+    width: 100px;
+    justify-content: center;
+    background-color: var(--background-color);
+    box-shadow: none;
+}
 
 .search__icon-arrow {
     height: 10px;
