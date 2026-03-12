@@ -75,6 +75,7 @@ document.querySelector('.search__clear-button').addEventListener('click', functi
     document.querySelectorAll('.flags__item').forEach(function(item){
         item.classList.remove('hidden')
         document.querySelector('.search__input').value = ""
+        document.querySelector('.filter-by-region').innerHTML = 'Filter by Region: All'
     })
 })
 
