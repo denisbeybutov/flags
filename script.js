@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const searchItems = document.querySelectorAll('.search__item')
 searchItems.forEach(function(region){
     region.addEventListener('click', function() {
+        document.querySelector('.filter-by-region').innerHTML = 'Filter by Region: ' + region.textContent
         searchButton.classList.toggle('active')
         document.querySelectorAll('.flags__item').forEach(function(flag){
             flag.classList.remove('hidden')
@@ -48,3 +49,35 @@ searchItems.forEach(function(region){
         })
     })
 })
+
+//поиск 
+// отмена отправки формы
+document.querySelector('.search__form').addEventListener('submit', function(event){
+    event.preventDefault()
+})
+
+document.querySelector('.search__input').addEventListener('change', function(event){
+    const searchCountry = event.target.value
+    const countryNames = document.querySelectorAll('.flags__name')
+    countryNames.forEach(function(country) {
+        if (!country.textContent.toLowerCase().includes(searchCountry.toLowerCase())) {
+            country.closest('.flags__item').classList.add('hidden')
+
+        }
+    })
+    
+
+})
+
+//сброс поика и фильтра, показываем все страны
+
+document.querySelector('.search__clear-button').addEventListener('click', function(){
+    document.querySelectorAll('.flags__item').forEach(function(item){
+        console.log(item)
+        item.classList.remove('hidden')
+    })
+})
+
+
+
+
