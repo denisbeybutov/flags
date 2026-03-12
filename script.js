@@ -73,8 +73,8 @@ document.querySelector('.search__input').addEventListener('change', function(eve
 
 document.querySelector('.search__clear-button').addEventListener('click', function(){
     document.querySelectorAll('.flags__item').forEach(function(item){
-        console.log(item)
         item.classList.remove('hidden')
+        document.querySelector('.search__input').value = ""
     })
 })
 
