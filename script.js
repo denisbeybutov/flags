@@ -7,7 +7,18 @@ searchButton.addEventListener('click', function() {
 
 // переключение светлой темной тем
 document.querySelector('.header__theme-switcher').addEventListener('click', function() {
-    document.querySelector('body').classList.toggle('dark-mode')
+    document.querySelector('body').classList.toggle('light-mode')
+    localStorage.setItem('site-mode', document.querySelector('body').className)
+    
+    
+})
+
+// чтение темы при загрузке страницы
+document.addEventListener('DOMContentLoaded', function() {
+    const savedMode = localStorage.getItem('site-mode')
+    if (savedMode) {
+        document.querySelector('body').classList.toggle(savedMode)
+    }
 })
 
 // фильтр по региону, логика фильтрации
