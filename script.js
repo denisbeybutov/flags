@@ -20,7 +20,12 @@ searchItems.forEach(function(region){
             flag.classList.remove('hidden')
             if(flag.querySelector('[data-region]').getAttribute('data-region') !== region.textContent) {
                 flag.classList.add('hidden')
+            }  
+            if (region.textContent === 'All') {
+                    flag.classList.remove('hidden')
             }
+
+
         })
     })
 })

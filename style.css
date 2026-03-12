@@ -204,7 +204,7 @@ body {
 
 
 .search__button.active + .search__list {
-    height: 180px;
+    height: 215px;
 }
 
 .search__item {
