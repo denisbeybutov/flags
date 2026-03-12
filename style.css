@@ -319,6 +319,10 @@ body {
     color: rgb(195, 194, 194);
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .flags__item {
         flex: 0 0 40%;
