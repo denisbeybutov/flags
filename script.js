@@ -5,6 +5,14 @@ searchButton.addEventListener('click', function() {
     this.classList.toggle('active')
 })
 
+//закрытие всплывающего окна по клику вне его
+document.addEventListener('click', function(event) {
+    if (!searchButton.contains(event.target)) {
+        searchButton.classList.remove('active')
+    }
+})
+
+
 // переключение светлой темной тем
 document.querySelector('.header__theme-switcher').addEventListener('click', function() {
     document.querySelector('body').classList.toggle('light-mode')
