@@ -118,6 +118,7 @@ body {
     width: 500px;
     padding: 13px 20px;
     background-color: var(--header-background-color);
+    position: relative;
 }
 
 
@@ -187,10 +188,22 @@ body {
 }
 
 .search__search-button {
-    width: 100px;
+    position: absolute;
+    right: 8px;
+    width: 130px;
+    height: 35px;
     justify-content: center;
     background-color: var(--background-color);
+    color: var(--color-text);
     box-shadow: none;
+    border: none;
+    font-family: "Acronym-Light";
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.search__search-button:hover {
+    color: var(--color-switcher-hover);
 }
 
 .search__icon-arrow {
@@ -247,7 +260,6 @@ body {
     box-shadow: var(--search-shadow);
     background-color: var(--header-background-color);
 }
-
 
 .flags__description {
     font-family: sans-serif;
@@ -359,6 +371,11 @@ body {
         top: 20px;
         width: 100%;
         
+    }
+
+    .search__search-button {
+        
+        right: 8px;
     }
 
     .flags {
